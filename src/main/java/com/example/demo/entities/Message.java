@@ -39,8 +39,13 @@ public class Message implements Serializable{
 	@JoinColumn(name = "client_id")
 	private Client client;
 
+    public Integer getIdMessage() {
+        return idMessage;
+    }
 
-    //***** METODOS *****
+    public void setIdMessage(Integer idMessage) {
+        this.idMessage = idMessage;
+    }
 
     public String getMessageText() {
         return messageText;
@@ -48,6 +53,14 @@ public class Message implements Serializable{
 
     public void setMessageText(String messageText) {
         this.messageText = messageText;
+    }
+
+    public Cabin getCabin() {
+        return cabin;
+    }
+
+    public void setCabin(Cabin cabin) {
+        this.cabin = cabin;
     }
 
     public Client getClient() {
@@ -58,21 +71,8 @@ public class Message implements Serializable{
         this.client = client;
     }
 
-    public Cabin getFarm() {
-        return cabin;
-    }
 
-    public void setCabin(Cabin cabin) {
-        this.cabin = cabin;
-    }
-
-    public Integer getIdMessage() {
-        return idMessage;
-    }
-
-    public void setIdMessage(Integer idMessage) {
-        this.idMessage = idMessage;
-    }
+ 
 
     
 }
